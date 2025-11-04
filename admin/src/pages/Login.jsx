@@ -17,7 +17,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const res = await axios.post(`${API_URL}/users/login`, { username, password });
+      const res = await axios.post(`/users/login`, { username, password });
 
       localStorage.setItem('token', res.data.token);
       setSuccess('Login successful! Redirecting...');
