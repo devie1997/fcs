@@ -22,7 +22,7 @@ app.use('/api/users', require('./routes/authRoutes'));
 app.use('/api/products', require('./routes/productRoutes'));
 app.use('/api', uploadRoutes);
 
-
+console.log('F+cTJg!FEhahPD')
 // Serve React (Vite) dist files
 const frontendPath = path.join(__dirname, './admin/dist');
 app.use(express.static(frontendPath));

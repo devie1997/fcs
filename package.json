@@ -13,5 +13,9 @@
   "scripts": {
     "start": "node server/server.js",
     "heroku-postbuild": "cd admin && npm install && npm run build"
-  }
+  },
+  "engines": {
+  "node": "22.x"
+}
+
 }
