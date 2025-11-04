@@ -1,4 +1,4 @@
-import "./PageLayout.css";
+import "./pageLayout.css";
 import { useNavigate } from "react-router-dom";
 
 const PageLayout = ({ text, data }) => {
