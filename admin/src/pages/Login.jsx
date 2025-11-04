@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import axios from 'axios';
 
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
+
 export default function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -15,7 +17,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/users/login', { username, password });
+      const res = await axios.post(`${API_URL}/users/login`, { username, password });
 
       localStorage.setItem('token', res.data.token);
       setSuccess('Login successful! Redirecting...');
